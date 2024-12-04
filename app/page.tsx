@@ -71,6 +71,7 @@ export default function Home() {
   };
 
   const getInsanityEmoji = (rating: number) => {
+    if (rating === 0) return '';
     if (rating <= 3) return '😌';
     if (rating <= 6) return '😅';
     if (rating <= 8) return '😱';
@@ -100,7 +101,7 @@ export default function Home() {
           animate={{ scale: 1 }}
           className="text-4xl font-bold mb-8 text-center italic"
         >
-          How insane is this? {insanityLevel > 0 && getInsanityEmoji(insanityLevel)}
+          How insane is this? {getInsanityEmoji(insanityLevel)}
         </motion.h1>
 
         <form onSubmit={handleSubmit} className="mb-8">
