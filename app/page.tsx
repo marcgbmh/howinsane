@@ -71,7 +71,7 @@ export default function Home() {
   };
 
   const getInsanityEmoji = (rating: number) => {
-    if (rating === 0) return '';
+    if (rating === 0) return '🫨';
     if (rating <= 3) return '😌';
     if (rating <= 6) return '😅';
     if (rating <= 8) return '😱';
